@@ -61,7 +61,7 @@ body {
 }
 
 .portfolio-container {
-    padding: 50px 30px;
+    padding: 80px 30px;
     border-top-left-radius: var(--border-ten);
     border-bottom-left-radius: var(--border-ten);
     border-bottom-right-radius: var(--border-ten);
