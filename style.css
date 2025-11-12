@@ -26,6 +26,7 @@ body {
     min-width: 300px;
     width: 900px;
     margin: 70px 0px;
+    border-radius: var(--border-ten);
 
     display: flex;
     flex-direction: column;
