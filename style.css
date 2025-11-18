@@ -57,7 +57,7 @@ h3 {
   background-color: #fff0f4;
   border: 2px solid #f2d6d9;
   border-radius: 2rem;
-  padding: 1.5rem;
+  padding: 1rem;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
