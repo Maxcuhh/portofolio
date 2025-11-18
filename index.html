@@ -1,165 +1,129 @@
-<html>
+import React from "react";
+import { MotionConfig, motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github, Mail, Feather } from "lucide-react";
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-</head>
+// Cute Retro Cartoon Cottage Portfolio with updated background image
+export default function CottagecorePortfolio() {
+  return (
+    <MotionConfig reducedMotion="user">
+      <div className="min-h-screen w-full p-6 font-serif text-[#3a2f2a] relative">
 
-<body>
-    <main class="main-container">
-        <br>
-        <br>
-        <div class="portfolio-container">
-            <div class="profile-container">
-                <img class="profile-image" src="https://i.pinimg.com/736x/43/82/c5/4382c5f3cb2380b5d761a79033009f7e.jpg" alt="profile-picture">
-                <div class="profile-details">
-                    <div class="prof-details one">
-                        <div class="name-and-desc">
-                            <i><h5 class="profile-name">_Mxz❦</h5></i>
-                            <span class="profile-tag">- Developer</span>
-                            <span class="profile-loc">
-                                <i class="las la-map-marker-alt"></i>
-                                <span>netherlands</span>
-                            </span>
-                        </div>
-                        <div class="social-stats">
-                            <div class="stats">
-                                <i class="las la-image"></i>
-                                <span>127</span>
-                            </div>
-                            <div class="stats">
-                                <i class="lar la-heart"></i>
-                                <span>520</span>
-                            </div>
-                            <div class="stats"> 
-                                <i class="las la-user-circle"></i>
-                                <span>470</span>
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <button class="button-follow">
-                                <i class="las la-user-plus"></i>
-                                <span>Follow</span>
-                            </button>
-                        </div>
+        {/* New Background using absolute img */}
+        <img src="https://i.pinimg.com/1200x/47/a3/55/47a35578f64cb1ca753cbbaa3cf00bba.jpg" alt="Cartoon Cottage Background" className="absolute inset-0 w-full h-full object-cover z-0" />
+
+        {/* Main content wrapper */}
+        <div className="relative z-10 max-w-5xl mx-auto bg-[#fff7f3] border border-[#f2d6d9] rounded-4xl shadow-2xl p-8 md:p-12 overflow-hidden">
+
+          {/* Decorative cartoon doodles */}
+          <svg className="absolute left-0 top-0 w-48 h-48 opacity-95 -translate-x-8 -translate-y-8" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <g stroke="#d9818f" strokeWidth="3" fill="#ffd8e4" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="50" cy="50" r="24" />
+              <circle cx="38" cy="48" r="12" fill="#ffe7f0" />
+              <circle cx="62" cy="48" r="12" fill="#ffe7f0" />
+              <path d="M50 74c-10 0-16 6-16 14" />
+            </g>
+          </svg>
+
+          <svg className="absolute right-0 bottom-0 w-48 h-48 opacity-95 translate-x-8 translate-y-8" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <g stroke="#d9818f" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M45 75c0-16 48-16 48 0v12c0 10-48 10-48 0V75z" fill="#ffb7c5" />
+              <ellipse cx="66" cy="95" rx="40" ry="12" fill="#ffeedd" />
+              <circle cx="60" cy="66" r="6" fill="#fff6f6" />
+              <circle cx="72" cy="66" r="6" fill="#fff6f6" />
+            </g>
+          </svg>
+
+          {/* Header */}
+          <motion.header initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="relative z-10 text-center">
+            <h1 className="text-5xl md:text-6xl font-handwritten tracking-tight text-[#d9818f] drop-shadow-lg">Welcome to My Cozy Code Cottage</h1>
+            <p className="mt-2 text-base md:text-lg max-w-2xl mx-auto">A whimsical, retro cartoon space where code blooms like little gardens.</p>
+          </motion.header>
+
+          {/* Main content */}
+          <main className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+
+            {/* Skills & About */}
+            <motion.section initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="col-span-1">
+              <Card className="rounded-3xl border-[#f2d6d9] bg-[#fff0f4] shadow-inner p-6">
+                <CardContent>
+                  <h3 className="text-xl font-handwritten mb-2 text-[#d9818f]">My Skills 🌸</h3>
+                  <ul className="list-disc ml-5 space-y-1 text-sm">
+                    <li>JavaScript & TypeScript</li>
+                    <li>React & Next.js</li>
+                    <li>Tailwind CSS & cute UI</li>
+                    <li>Node.js & APIs</li>
+                    <li>Accessibility & animations ✨</li>
+                  </ul>
+                  <hr className="my-4 border-dashed border-[#f2d6d9]" />
+                  <p className="text-sm font-handwritten">I love building small, cheerful tools and interfaces — soft colors, rounded edges, and whimsical touches make code fun!</p>
+                </CardContent>
+              </Card>
+            </motion.section>
+
+            {/* Projects */}
+            <motion.section id="projects" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.2 }} className="md:col-span-2 space-y-4">
+              <h2 className="text-2xl font-handwritten mb-2 text-[#d9818f]">Featured Projects 🌷</h2>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                {/* Project 1 */}
+                <article className="rounded-3xl border border-[#f2d6d9] bg-[#fff0f4] shadow-md p-4 flex items-start gap-3 hover:scale-105 transition-transform duration-300">
+                  <div className="w-16 h-16 rounded-full bg-[#ffd8e4] flex items-center justify-center text-xl font-handwritten">🌿</div>
+                  <div>
+                    <h3 className="font-handwritten text-lg">Forest Taskkeeper</h3>
+                    <p className="text-xs mt-1">A cheerful task app with cute micro-interactions and forest illustrations.</p>
+                    <div className="mt-2 flex gap-2">
+                      <a href="#" className="text-sm underline">Live</a>
+                      <a href="#" className="text-sm underline">Code</a>
                     </div>
-                    <div class="prof-details two">
-                        <div class="about-container">
-                            <h5 class="about-me">About Me</h5>
-                            <p class="about-desc">I am a 17 year old developer from the netherlands. I love coding and creating new things. I want to learn more about coding and web development and i am always looking for new challenges to improve my skills.
-                            <br>
-                            <br>
-                            I do commissions ! DM me on discord for more info. !! PRICES VARY !! Discord: Chyaru__
-                            </p>
-                        </div>
-                        <div class="skills-container">
-                            <h5>Skills</h5>
-                            <div class="skills-stats">
-                                <div class="skills">
-                                    <span class="skill">Equipment</span>
-                                    <div class="progress-bar equipment">
-                                        <div class="progress-percentage"></div>
-                                        <div class="progress-ball"></div>
-                                    </div>
-                                </div>
-                                <div class="skills">
-                                    <span class="skill">English</span>
-                                    <div class="progress-bar editing">
-                                        <div class="progress-percentage"></div>
-                                        <div class="progress-ball"></div>
-                                    </div>
-                                </div>
-                                <div class="skills">
-                                    <span class="skill">norwegian</span>
-                                    <div class="progress-bar retouching">
-                                        <div class="progress-percentage"></div>
-                                        <div class="progress-ball"></div>
-                                    </div>
-                                </div>
-                                <div class="skills">
-                                    <span class="skill">coding</span>
-                                    <div class="progress-bar marketing">
-                                        <div class="progress-percentage"></div>
-                                        <div class="progress-ball"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                  </div>
+                </article>
+
+                {/* Project 2 */}
+                <article className="rounded-3xl border border-[#f2d6d9] bg-[#fff0f4] shadow-md p-4 flex items-start gap-3 hover:scale-105 transition-transform duration-300">
+                  <div className="w-16 h-16 rounded-full bg-[#ffd8b7] flex items-center justify-center text-xl font-handwritten">🍵</div>
+                  <div>
+                    <h3 className="font-handwritten text-lg">Herbal Market</h3>
+                    <p className="text-xs mt-1">Prototype for a whimsical e‑commerce store with calm, playful flows.</p>
+                    <div className="mt-2 flex gap-2">
+                      <a href="#" className="text-sm underline">Prototype</a>
+                      <a href="#" className="text-sm underline">Code</a>
                     </div>
-                </div>
+                  </div>
+                </article>
+
+              </div>
+            </motion.section>
+
+            {/* Contact */}
+            <motion.aside initial={{ opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.25 }} className="col-span-1">
+              <Card className="rounded-3xl border-[#f2d6d9] bg-[#fff0f4] shadow-inner p-6 text-center">
+                <CardContent>
+                  <h4 className="text-lg font-handwritten mb-2">Let’s Connect 💌</h4>
+                  <p className="text-sm mb-4">Open to frontend work, experiments, and whimsical collaborations.</p>
+                  <div className="flex flex-col gap-2">
+                    <a href="https://github.com/your-username" target="_blank" rel="noreferrer"><Button className="w-full rounded-full bg-[#ffd8e4] hover:bg-[#ffb7c5]">GitHub</Button></a>
+                    <a href="mailto:you@example.com"><Button className="w-full rounded-full border border-[#d9818f] bg-[#fff0f4] hover:bg-[#ffe7f0]">Email</Button></a>
+                  </div>
+                  <p className="text-xs mt-3 font-handwritten">Or send a paper dove 🕊️ — I’ll reply soon!</p>
+                </CardContent>
+              </Card>
+            </motion.aside>
+
+          </main>
+
+          {/* Footer */}
+          <motion.footer initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.35 }} className="mt-10 text-center text-sm relative z-10 font-handwritten">
+            <div className="inline-flex items-center gap-3 bg-[#fff0f4] px-4 py-2 rounded-full border border-[#f2d6d9] shadow-sm">
+              <span>© {new Date().getFullYear()} Your Name</span>
+              <span className="h-4 w-px bg-[#f2d6d9] mx-2" />
+              <a href="/resume.pdf" className="underline text-xs">Resume</a>
             </div>
-            <div id="pictures-cont" class="pictures-container">
-                <h5>Pictures</h5>
-                <div class="pictures-grid grid-one">
-                    <div id="picture-one" class="picture picture-one">
-                        <img src="https://i.pinimg.com/736x/43/82/c5/4382c5f3cb2380b5d761a79033009f7e.jpg" alt="bass">
-                        <div id="like-one" class="like-container">
-                            <i class="las la-heart"></i>
-                            <span>328 likes</span>
-                        </div>
-                    </div>
-                    <div id="picture-two" class="picture picture-two">
-                        <img src="https://i.pinimg.com/736x/ff/66/f9/ff66f9408ba418a6e226ef3a24fc56c0.jpg" alt="sailor moon">
-                        <div id="like-two" class="like-container">
-                            <i class="las la-heart"></i>
-                            <span>222 likes</span>
-                        </div>
-                    </div>
-                    <div id="picture-three" class="picture picture-three">
-                        <img src="https://i.pinimg.com/736x/59/5a/ae/595aae32d4a54e9e9ab2b9d9d0f0b74b.jpg" alt="ramen">
-                        <div id="like-three" class="like-container">
-                            <i class="las la-heart"></i>
-                            <span>171 likes</span>
-                        </div>
-                    </div>
-                    <div id="picture-four" class="picture picture-four">
-                        <img src="https://i.pinimg.com/736x/a6/a7/ed/a6a7ed76fb0c05d0c792caf385ce9bac.jpg" alt="river">
-                        <div id="like-four" class="like-container">
-                            <i class="las la-heart"></i>
-                            <span>291 likes</span>
-                        </div>
-                    </div>
-                    <div id="picture-five" class="picture picture-five">
-                        <img src="https://i.pinimg.com/736x/d7/5e/5f/d75e5f676b77ef1f1e51ee29c9b08dbd.jpg" alt="omori">
-                        <div id="like-five" class="like-container">
-                            <i class="las la-heart"></i>
-                            <span>430 likes</span>
-                        </div>
-                    </div>
-                    <div id="picture-six" class="picture picture-six">
-                        <img src="https://i.pinimg.com/1200x/4b/fd/5b/4bfd5b0642cccbb9ced783bf1949caa7.jpg" alt="happy-doge">
-                        <div id="like-six" class="like-container">
-                            <i class="las la-heart"></i>
-                            <span>199 likes</span>
-                        </div>
-                    </div>
-                    <div id="picture-seven" class="picture picture-seven">
-                        <img src="https://i.pinimg.com/736x/d2/c1/71/d2c171737f3108683cc5857df49efd05.jpg" alt="image of tokyo">
-                        <div id="like-seven" class="like-container">
-                            <i class="las la-heart"></i>
-                            <span>573 likes</span>
-                        </div>
-                    </div>
-                    <div id="picture-eight" class="picture picture-eight">
-                        <img src="https://i.pinimg.com/736x/b5/c4/a9/b5c4a96f59ca683bb3b8a09a817c220b.jpg" alt="aesthetic-anime-girl">
-                        <div id="like-eight" class="like-container">
-                            <i class="las la-heart"></i>
-                            <span>290 likes</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="pictures-grid grid-two">
-
-                </div>
-                <button class="load-more">Load More</button>
-            </div>
+          </motion.footer>
         </div>
-    </main>
-</body>
-
-</html>
+      </div>
+    </MotionConfig>
+  );
+}
