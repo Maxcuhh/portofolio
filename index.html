@@ -1,49 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cottagecore Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <header class="text-center">
-      <h1>Welcome to My Cozy Code Cottage</h1>
-      <p>A whimsical, retro cartoon space where code blooms like little gardens.</p>
-    </header>
-    <main class="grid">
-      <section class="card">
-        <h3>My Skills 🌸</h3>
-        <ul>
-          <li>JavaScript & TypeScript</li>
-          <li>React & Next.js</li>
-          <li>Tailwind CSS & cute UI</li>
-          <li>Node.js & APIs</li>
-          <li>Accessibility & animations ✨</li>
-        </ul>
-      </section>
-      <section class="card">
-        <h3>Projects 🌷</h3>
-        <article class="card">
-          <h4>Forest Taskkeeper</h4>
-          <p>A cheerful task app with cute micro-interactions and forest illustrations.</p>
-        </article>
-        <article class="card">
-          <h4>Herbal Market</h4>
-          <p>Prototype for a whimsical e‑commerce store with calm, playful flows.</p>
-        </article>
-      </section>
-      <section class="card">
-        <h3>Contact 💌</h3>
-        <button>GitHub</button>
-        <button>Email</button>
-      </section>
-    </main>
-    <footer class="text-center">
-      <p>© 2025 Your Name</p>
-      <a href="/resume.pdf">Resume</a>
-    </footer>
-  </div>
-</body>
-</html>
+import React from "react";
+import { motion } from "framer-motion";
+
+export default function CottagecorePortfolio() {
+  return (
+    <div className="min-h-screen w-full p-6 font-serif text-[#3a2f2a] relative">
+      <img src="https://i.pinimg.com/1200x/47/a3/55/47a35578f64cb1ca753cbbaa3cf00bba.jpg" alt="Cartoon Cottage Background" className="absolute inset-0 w-full h-full object-cover z-0" />
+      <div className="relative z-10 max-w-5xl mx-auto bg-[#fff7f3] border border-[#f2d6d9] rounded-4xl shadow-2xl p-8 md:p-12 overflow-hidden">
+        <motion.header initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center">
+          <h1 className="text-5xl md:text-6xl font-handwritten tracking-tight text-[#d9818f] drop-shadow-lg">Welcome to My Cozy Code Cottage</h1>
+          <p className="mt-2 text-base md:text-lg max-w-2xl mx-auto">A whimsical, retro cartoon space where code blooms like little gardens.</p>
+        </motion.header>
+        <main className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+          <motion.section initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="col-span-1">
+            <div className="rounded-3xl border-[#f2d6d9] bg-[#fff0f4] shadow-inner p-6">
+              <h3 className="text-xl font-handwritten mb-2 text-[#d9818f]">My Skills 🌸</h3>
+              <ul className="list-disc ml-5 space-y-1 text-sm">
+                <li>JavaScript & TypeScript</li>
+                <li>React & Next.js</li>
+                <li>Tailwind CSS & cute UI</li>
+                <li>Node.js & APIs</li>
+                <li>Accessibility & animations ✨</li>
+              </ul>
+              <hr className="my-4 border-dashed border-[#f2d6d9]" />
+              <p className="text-sm font-handwritten">I love building small, cheerful tools and interfaces — soft colors, rounded edges, and whimsical touches make code fun!</p>
+            </div>
+          </motion.section>
+          <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.2 }} className="md:col-span-2 space-y-4">
+            <h2 className="text-2xl font-handwritten mb-2 text-[#d9818f]">Featured Projects 🌷</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <article className="rounded-3xl border border-[#f2d6d9] bg-[#fff0f4] shadow-md p-4 flex items-start gap-3 hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-full bg-[#ffd8e4] flex items-center justify-center text-xl font-handwritten">🌿</div>
+                <div>
+                  <h3 className="font-handwritten text-lg">Forest Taskkeeper</h3>
+                  <p className="text-xs mt-1">A cheerful task app with cute micro-interactions and forest illustrations.</p>
+                  <div className="mt-2 flex gap-2">
+                    <a href="#" className="text-sm underline">Live</a>
+                    <a href="#" className="text-sm underline">Code</a>
+                  </div>
+                </div>
+              </article>
+              <article className="rounded-3xl border border-[#f2d6d9] bg-[#fff0f4] shadow-md p-4 flex items-start gap-3 hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-full bg-[#ffd8b7] flex items-center justify-center text-xl font-handwritten">🍵</div>
+                <div>
+                  <h3 className="font-handwritten text-lg">Herbal Market</h3>
+                  <p className="text-xs mt-1">Prototype for a whimsical e‑commerce store with calm, playful flows.</p>
+                  <div className="mt-2 flex gap-2">
+                    <a href="#" className="text-sm underline">Prototype</a>
+                    <a href="#" className="text-sm underline">Code</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </motion.section>
+          <motion.aside initial={{ opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.25 }} className="col-span-1">
+            <div className="rounded-3xl border-[#f2d6d9] bg-[#fff0f4] shadow-inner p-6 text-center">
+              <h4 className="text-lg font-handwritten mb-2">Let’s Connect 💌</h4>
+              <p className="text-sm mb-4">Open to frontend work, experiments, and whimsical collaborations.</p>
+              <div className="flex flex-col gap-2">
+                <a href="https://github.com/your-username" target="_blank" rel="noreferrer"><button className="w-full rounded-full bg-[#ffd8e4] hover:bg-[#ffb7c5]">GitHub</button></a>
+                <a href="mailto:you@example.com"><button className="w-full rounded-full border border-[#d9818f] bg-[#fff0f4] hover:bg-[#ffe7f0]">Email</button></a>
+              </div>
+              <p className="text-xs mt-3 font-handwritten">Or send a paper dove 🕊️ — I’ll reply soon!</p>
+            </div>
+          </motion.aside>
+        </main>
+        <motion.footer initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.35 }} className="mt-10 text-center text-sm relative z-10 font-handwritten">
+          <div className="inline-flex items-center gap-3 bg-[#fff0f4] px-4 py-2 rounded-full border border-[#f2d6d9] shadow-sm">
+            <span>© {new Date().getFullYear()} Your Name</span>
+            <span className="h-4 w-px bg-[#f2d6d9] mx-2" />
+            <a href="/resume.pdf" className="underline text-xs">Resume</a>
+          </div>
+        </motion.footer>
+      </div>
+    </div>
+  );
+}
