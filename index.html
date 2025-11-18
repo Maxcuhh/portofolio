@@ -4,17 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cottagecore Portfolio</title>
-  <!-- Link to external CSS file -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="root"></div>
-
-  <!-- Include React and ReactDOM via CDN -->
-  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-
-  <!-- Main JS file -->
-  <script type="module" src="app.js"></script>
+  <div class="container">
+    <img src="https://i.pinimg.com/1200x/47/a3/55/47a35578f64cb1ca753cbbaa3cf00bba.jpg" alt="Background" class="bg-image" />
+    <header class="text-center">
+      <h1>Welcome to My Cozy Code Cottage</h1>
+      <p>A whimsical, retro cartoon space where code blooms like little gardens.</p>
+    </header>
+    <main class="grid">
+      <section class="card">
+        <h3>My Skills 🌸</h3>
+        <ul>
+          <li>JavaScript & TypeScript</li>
+          <li>React & Next.js</li>
+          <li>Tailwind CSS & cute UI</li>
+          <li>Node.js & APIs</li>
+          <li>Accessibility & animations ✨</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h3>Projects 🌷</h3>
+        <article class="card">
+          <h4>Forest Taskkeeper</h4>
+          <p>A cheerful task app with cute micro-interactions and forest illustrations.</p>
+        </article>
+        <article class="card">
+          <h4>Herbal Market</h4>
+          <p>Prototype for a whimsical e‑commerce store with calm, playful flows.</p>
+        </article>
+      </section>
+      <section class="card">
+        <h3>Contact 💌</h3>
+        <button>GitHub</button>
+        <button>Email</button>
+      </section>
+    </main>
+    <footer class="text-center">
+      <p>© 2025 Your Name</p>
+      <a href="/resume.pdf">Resume</a>
+    </footer>
+  </div>
 </body>
 </html>
