@@ -25,20 +25,12 @@ h1 {
   font-family: "Comic Sans MS", cursive;
 }
 
-p {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 1.25rem;
-    color: #bfdaa3;
-    line-height: 1.6;
-}
 .intro {
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
   font-size: 1.25rem;
-  color: #5a463c;
+  color: #fbfac4;
   line-height: 1.6;
 }
 
@@ -84,4 +76,19 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   color: #6b4b3b;
+}
+/* Animation for products */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-card.animate {
+  animation: fadeSlideUp 0.5s ease forwards;
 }
